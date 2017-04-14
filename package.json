@@ -1,0 +1,48 @@
+{
+  "name": "bluedata",
+  "version": "1.0.0",
+  "description": "simple task management application using redis for persistance",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start" : "node app"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "~1.12.0",
+    "connect-flash": "*",
+    "cookie-parser": "~1.3.4",
+    "debug": "~2.1.1",
+    "ejs": "~2.3.1",
+    "ejs-locals": "*",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "*",
+    "gulp": "^3.9.1",
+    "handlebar": "^1.0.0",
+    "handlebars": "^4.0.6",
+    "method-override": "^2.3.8",
+    "mongoose": "*",
+    "nodemon": "^1.11.0",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "redis": "^2.7.1",
+    "requestify": "^0.2.5",
+    "serve-favicon": "~2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsanjeevkumar/bluedata.git"
+  },
+  "keywords": [
+    "redis",
+    "task",
+    "management"
+  ],
+  "author": "Sanjeev Kumar Gadamsetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsanjeevkumar/bluedata/issues"
+  },
+  "homepage": "https://github.com/gsanjeevkumar/bluedata#readme"
+}
