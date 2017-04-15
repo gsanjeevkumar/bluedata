@@ -1,0 +1,15 @@
+<h1>Setup a Task</h1>
+{{#if error}}<span>{{error}}</span>{{/if}}
+<form class="form-inline" action="/tasks/create" method="post">
+  <div class="form-horizontal">
+      <div class="col-lg-10">
+        <input type="text" name="domain" class="form-control" placeholder="Enter a Domain">
+      </div>
+      <div class="col-lg-10">
+        <input size="30" type="text" name="url" class="form-control" placeholder="Enter a specific URL or, the domain will be used">
+      </div>
+      <div class="col-lg-10">
+          <input type="submit" class="btn btn-primary" value="create"/>
+      </div>
+  </div>
+</form>

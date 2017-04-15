@@ -15,15 +15,6 @@ var client = redis.createClient();
 
 client.on('connect', function(){
   console.log('Connected to Redis');
-
-  client.hgetall(id, function(err, obj){
-    if (!obj) {
-      res.render('searchtasks', {
-        error: 'No Task exists!'
-      });
-    }
-  });
-
 });
 
 const port = 3000;
@@ -46,8 +37,36 @@ app.get('/', function(req, res, next){
 
 app.post('/tasks/search', function(req, res, next){
   var id = req.body.id;
+
+  client.hgetall(id, function(err, obj){
+    if (!obj) {
+      res.render('searchtasks', {
+        error: 'No Task exists!'
+      });
+    }else{
+      obj.id = id;
+      res.render('details', {
+        user: obj
+      });
+    }
+  });
 });
 
+app.get('/tasks', function(req, res, next){
+  res.render('tasks')
+});
+
+app.get('/tasks/create', function(req, res, next){
+  res.render('add-tasks')
+});
+
+app.post('/tasks/create', function(req, res, next){
+
+});
+
+app.get('/tasks', function(req, res, next){
+  res.render('tasks');
+});
 
 var tasks = [];
 var sites = ['www.bluegreenvacations.com'];
